@@ -1,0 +1,56 @@
+	
+
+LOXTON_RESEARCH_CENTRE (Australia)
+coordinates: -34.43N, 140.60E, 66.0m
+GHCN-D station code: ASN00024023 (get data)
+Found 21 years of data in 1965-1985
+
+LOXTON_RESEARCH_CENTRE (Australia)
+coordinates: -34.44N, 140.60E, 30.0m
+GHCN-D station code: ASN00024024 (get data)
+WMO station: 94682
+Found 31 years of data in 1984-2014
+
+LAMEROO_COMPARISON (Australia)
+coordinates: -35.33N, 140.52E, 99.0m
+GHCN-D station code: ASN00025509 (get data)
+WMO station: 94688
+Found 58 years of data in 1957-2014
+
+LAKE_VICTORIA_STORAGE (Australia)
+coordinates: -34.04N, 141.27E, 43.0m
+GHCN-D station code: ASN00047016 (get data)
+WMO station: 94692
+Found 49 years of data in 1966-2014
+
+BALRANALD_(RSL) (Australia)
+coordinates: -34.64N, 143.56E, 61.0m
+GHCN-D station code: ASN00049002 (get data)
+WMO station: 94696
+Found 50 years of data in 1965-2014
+
+
+MILDURA_AIRPORT (Australia)
+coordinates: -34.24N, 142.09E, 50.0m
+GHCN-D station code: ASN00076031 (get data)
+WMO station: 94693
+Found 69 years of data in 1946-2014
+
+MILDURA_POST_OFFICE (Australia)
+coordinates: -34.18N, 142.20E, 54.0m
+GHCN-D station code: ASN00076077 (get data)
+Found 61 years of data in 1889-1949
+
+
+OUYEN_(POST_OFFICE) (Australia)
+coordinates: -35.07N, 142.32E, 50.0m
+GHCN-D station code: ASN00076047 (get data)
+WMO station: 94831
+Found 58 years of data in 1957-2014
+
+
+KERANG (Australia)
+coordinates: -35.72N, 143.92E, 78.0m
+GHCN-D station code: ASN00080023 (get data)
+WMO station: 94844
+Found 53 years of data in 1962-2014

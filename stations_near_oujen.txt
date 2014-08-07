@@ -1,0 +1,157 @@
+	
+
+Found station data
+daily gdcntmax stations between -33N to -36N and 140E to 144E
+helpCreate a new set of station data
+New time scale:	
+New variable:	 of
+Threshold:	  
+Minimum:	% valid data
+
+Searching for stations in -33.00N:-36.00N, 140.00E: 144.00E
+Requiring at least 10 years with data
+Found 26 stations
+
+GLUEPOT_RESERVE_(GLUEPOT) (Australia)
+coordinates: -33.76N, 140.13E, 55.0m
+GHCN-D station code: ASN00020028 (get data)
+WMO station: 95668
+Found 16 years of data in 1999-2014
+
+RENMARK (Australia)
+coordinates: -34.17N, 140.75E, 20.0m
+GHCN-D station code: ASN00024016 (get data)
+Found 46 years of data in 1957-2002
+
+LOXTON_RESEARCH_CENTRE (Australia)
+coordinates: -34.43N, 140.60E, 66.0m
+GHCN-D station code: ASN00024023 (get data)
+Found 21 years of data in 1965-1985
+
+LOXTON_RESEARCH_CENTRE (Australia)
+coordinates: -34.44N, 140.60E, 30.0m
+GHCN-D station code: ASN00024024 (get data)
+WMO station: 94682
+Found 31 years of data in 1984-2014
+
+BERRI (Australia)
+coordinates: -34.27N, 140.60E, 50.0m
+GHCN-D station code: ASN00024025 (get data)
+Found 10 years of data in 1962-1972
+
+RENMARK_AERO (Australia)
+coordinates: -34.20N, 140.68E, 32.0m
+GHCN-D station code: ASN00024048 (get data)
+WMO station: 95687
+Found 20 years of data in 1995-2014
+
+LOXTON_(WANBI_RESEARCH_CENTRE) (Australia)
+coordinates: -34.78N, 140.27E, 77.0m
+GHCN-D station code: ASN00025034 (get data)
+Found 27 years of data in 1967-1993
+
+CALIPH (Australia)
+coordinates: -34.63N, 140.24E, 68.0m
+GHCN-D station code: ASN00025050 (get data)
+Found 30 years of data in 1974-2003
+
+LAMEROO_COMPARISON (Australia)
+coordinates: -35.33N, 140.52E, 99.0m
+GHCN-D station code: ASN00025509 (get data)
+WMO station: 94688
+Found 58 years of data in 1957-2014
+
+LAMEROO_(AUSTIN_PLAINS) (Australia)
+coordinates: -35.38N, 140.54E, 110.0m
+GHCN-D station code: ASN00025562 (get data)
+WMO station: 94690
+Found 11 years of data in 2004-2014
+
+LAKE_VICTORIA_STORAGE (Australia)
+coordinates: -34.04N, 141.27E, 43.0m
+GHCN-D station code: ASN00047016 (get data)
+WMO station: 94692
+Found 49 years of data in 1966-2014
+
+POONCARIE_MAIL_AGENCY (Australia)
+coordinates: -33.39N, 142.57E, 53.0m
+GHCN-D station code: ASN00047029 (get data)
+WMO station: 95692
+Found 13 years of data in 2002-2014
+
+WENTWORTH_POST_OFFICE (Australia)
+coordinates: -34.11N, 141.92E, 37.0m
+GHCN-D station code: ASN00047053 (get data)
+Found 11 years of data in 1957-1967
+
+BALRANALD_(RSL) (Australia)
+coordinates: -34.64N, 143.56E, 61.0m
+GHCN-D station code: ASN00049002 (get data)
+WMO station: 94696
+Found 50 years of data in 1965-2014
+
+MERBEIN_CSIRO_RESEARCH_STATION (Australia)
+coordinates: -34.21N, 142.04E, 56.0m
+GHCN-D station code: ASN00076026 (get data)
+Found 11 years of data in 1965-1975
+
+MILDURA_AIRPORT (Australia)
+coordinates: -34.24N, 142.09E, 50.0m
+GHCN-D station code: ASN00076031 (get data)
+WMO station: 94693
+Found 69 years of data in 1946-2014
+
+OUYEN_(POST_OFFICE) (Australia)
+coordinates: -35.07N, 142.32E, 50.0m
+GHCN-D station code: ASN00076047 (get data)
+WMO station: 94831
+Found 58 years of data in 1957-2014
+
+WALPEUP_RESEARCH (Australia)
+coordinates: -35.12N, 142.00E, 105.0m
+GHCN-D station code: ASN00076064 (get data)
+WMO station: 95831
+Found 50 years of data in 1965-2014
+
+MILDURA_POST_OFFICE (Australia)
+coordinates: -34.18N, 142.20E, 54.0m
+GHCN-D station code: ASN00076077 (get data)
+Found 61 years of data in 1889-1949
+
+ROBINVALE_CONSOLIDATED_SCHOOL (Australia)
+coordinates: -34.60N, 142.78E, 49.0m
+GHCN-D station code: ASN00076125 (get data)
+Found 11 years of data in 1970-1980
+
+BEULAH (Australia)
+coordinates: -35.94N, 142.42E, 100.0m
+GHCN-D station code: ASN00077004 (get data)
+Found 19 years of data in 1957-1975
+
+BIRCHIP_POST_OFFICE (Australia)
+coordinates: -35.98N, 142.92E, 102.0m
+GHCN-D station code: ASN00077007 (get data)
+Found 20 years of data in 1965-1984
+
+HOPETOUN_AIRPORT (Australia)
+coordinates: -35.72N, 142.36E, 77.0m
+GHCN-D station code: ASN00077010 (get data)
+WMO station: 94838
+Found 11 years of data in 2004-2014
+
+SWAN_HILL_POST_OFFICE (Australia)
+coordinates: -35.34N, 143.55E, 70.0m
+GHCN-D station code: ASN00077042 (get data)
+Found 37 years of data in 1960-1996
+
+SWAN_HILL_AERODROME (Australia)
+coordinates: -35.38N, 143.54E, 71.0m
+GHCN-D station code: ASN00077094 (get data)
+WMO station: 94843
+Found 19 years of data in 1996-2014
+
+KERANG (Australia)
+coordinates: -35.72N, 143.92E, 78.0m
+GHCN-D station code: ASN00080023 (get data)
+WMO station: 94844
+Found 53 years of data in 1962-2014

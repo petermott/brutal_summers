@@ -1,0 +1,125 @@
+---
+title: "Brutal Oz Summers in Rural Victoria"
+author: "Peter Mott"
+date: "Tuesday, August 05, 2014"
+output: 
+    html_document:
+        theme: "flatly"
+        css: "styles.css"
+  
+
+---
+
+```{r echo=FALSE}
+library(ggplot2)
+library(plyr)      # summarise
+library(reshape2)  # melt
+library(RColorBrewer)
+
+files <- list.files("data",".*_DAY")
+
+foo<-function(x) {
+    summarise(x, 
+              extreme=nrow(x[x$tmax>=45,]),
+              veryHot=nrow(x[x$tmax>=40 & x$tmax <45,]),
+              hot=nrow(x[x$tmax>=35 & x$tmax<40,]) 
+              )}
+
+showchart <- function(d,title, start=1950, end=2010, scaletop=50){
+    temps <- ddply(d, .(year), .fun=foo)
+    tempsL <- melt(temps, id.vars="year")
+    g <- ggplot(tempsL, aes(x=year, y=value, fill=variable)) + 
+        geom_bar(aes(order=desc(variable)), stat="identity", position="stack")
+    g <- g + theme_bw() + ylab("Days") + labs(fill="Heat")
+    g <- g + ggtitle(title) + theme(plot.title=element_text(vjust = -2.5))
+    g <- g + scale_fill_manual(values=rev(brewer.pal(3, "RdPu")))
+    g <- g + scale_y_continuous(breaks=seq(0,scaletop,by=10), limits=c(0,scaletop))
+    g <- g + scale_x_continuous(breaks=seq(start,end,by=10))
+    print(g)
+}
+
+gettitle <- function(f) {
+    line <- readLines(f,n=2)[2]
+    title <- strsplit(line,"ASN\\d+ ", perl=TRUE)
+    return(title[[1]][2])
+}
+```
+
+## Brutal Summers
+
+Louise wrote that:
+
+> I was shocked in Oz by tales of increasingly brutal summers. I spoke to a cafe 
+> owner in rural Victoria who reported recent summers of 48 degrees, with birds
+> falling dead out of the trees."
+
+I was shocked too. So I thought to get some of the weather station data for "rural Victoria" and see how things have changed there in recent years. Have summers really become more brutal, or is it just that Australian summers have always been brutal and that because of the media attention climate has received in the last ten years or so people notice it more? 
+
+
+## Rural Victoria
+
+Louise's cafe was in Ouyen (35.1&deg;S, 142.3&deg;E). There is a weather station at Mildura Airport (34.2S,  142.0E) which has records going back to 1946 up to and including 2014. I got down the monthly maximum temperatures. Here they are for January, Februray, and March:
+
+[All data from Australian weather stations is via the KMNI climate site http://climexp.knmi.nl/start.cgi?someone@somewhere]. 
+
+
+```{r, echo=FALSE, fig.align='center'}
+d <- read.table("data/MILDURA_AIRPORT_MONTHLY.dat", skip=5, header=FALSE,na.strings="-999.9")
+# library(ggplot2)
+# library(plyr)      # summarise
+# library(reshape2)  # melt
+colnames(d) <- c("year","jan", "feb", "mar", "apr", "may", "jun", 
+                        "jul", "aug", "sep", "oct", "nov", "dec")
+dm <- melt(d, id.vars="year")  
+dm <- subset(dm, variable %in% c('jan', 'feb', 'mar'))
+
+
+g <- ggplot(dm, aes(x=year, y=value), na.rm=TRUE) + geom_line(colour=colors()[553])+geom_point() + geom_hline(yintercept=35, linetype="dashed", colour="#888888")
+g <- g + facet_grid(variable~.)
+g <- g + scale_x_continuous(breaks=seq(1950,2010, by=10))
+g <- g + theme_bw()
+suppressWarnings(print(g))
+
+```
+
+January is the hottest month and it looks hotter since 2000 than it has been before. There is a nasty gap in the record in the 1990's which spoils things a bit. But look at the points above on the 35&deg;C (95F) line: with one exception they all occur after 1975 (the exception is 1960). At Mildura Airport it was certainly hotter from 1980-2010 than it was from 1950-1980 and it shows no sign at all of getting cooler again (see http://www.abc.net.au/news/2014-01-03/2013-was-the-hottest-year-on-record-for-australia/5183040 for a breathless report of  Australia's hottest year ever). But this is about averages - not brutal summers with birds falling dead from the trees. 
+
+## Hot Days
+
+There are 26 weather staions within about 125 miles of Ouyen but few of these are very useful. Many don't go back very far or have "died". Loxton Research Center goes back to 1965 and up to 2014. But during that time it has moved about 1200 yards South and downwards some 30 meters resulting in two series. I have left Loxton well alone.
+
+In the end there I chose the `r length(files)` stations with records back to before 1970 and reaching up to the present. For these stations I downloaded the complete daily maximum temperature records. 
+
+What is a brutal temperature?  Well start with 35&deg;C (95&deg;F) which is hot, then 40&deg;C (104&deg;F) which is very hot, and finally 45&deg;C (114&deg;F) which is extremely, scorching hot. So we take a station data and for each year count the days that reach each hot temperature (this means that a 40&degC day is not also counted as a 35&deg;C day).
+
+[Stations in the region 33-36S and 140-144E which is region. A degree of longitude there is about 58 miles, and of latitude 69 miles] 
+
+```{r echo=FALSE, fig.align='center', fig.width=8, fig.height=4}
+for (file in files) {
+f <- paste("data", file, sep="/")
+d <- read.table(f,header=FALSE,skip=5, col.names=c("year","month", "day", "tmax"))
+title <- gettitle(f)
+showchart(d,title)
+}
+
+```
+Has Extreme heat increased in rural Victoria? Well you can read the charts as well as I can so I'll leave that to you. 
+
+## Wrap
+
+Mildura Airport which we started with looks to have been more extreme in the 1980's than the (so-called) noughties. I picked on Mildura first quite by chance but there is actually something rather special about it. The nearby, now deceased, station at Mildura Post Office has records back to 1889 which is positively ancient. Here is the chart:
+
+```{r echo=FALSE, fig.align='center', fig.width=8, fig.height=4}
+f <- "data/MILDURA_POST_OFFICE_OLD.dat"
+d <- read.table(f,header=FALSE,skip=4, col.names=c("year","month", "day", "tmax"))
+title <- "MILDURA POST OFFICE"
+showchart(d, title, start=1890, end=1950, scaletop=80)
+```
+
+It seems the summers at Mildura Post Office around 1900 were far more brutal than today. And what was the weather like in 1820, 1610 .... the record is so short. 
+
+<div style="font-size:90%; margin:3em">
+The sources for this piece are available at http://github.com/petermott/brutal_summers
+</div>
+
+
