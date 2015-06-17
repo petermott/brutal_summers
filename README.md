@@ -17,7 +17,7 @@
    
     Made with RStudio Version 0.98.932 with:
    
-    platform       x86_64-w64-mingw32          
+    platform       x86_64-w64-mingw32          2
     arch           x86_64                      
     os             mingw32                     
     system         x86_64, mingw32             

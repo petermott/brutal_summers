@@ -24,8 +24,8 @@ foo<-function(x) {
               veryHot=nrow(x[x$tmax>=40 & x$tmax <45,]),
               hot=nrow(x[x$tmax>=35 & x$tmax<40,]) 
               )}
-
-showchart <- function(d,title, start=1950, end=2010, scaletop=50){
+# brewer.pal.info for the palettes and help(ColorBrewer)
+showchart <- function(d, title, start=1950, end=2010, scaletop=50){
     temps <- ddply(d, .(year), .fun=foo)
     tempsL <- melt(temps, id.vars="year")
     g <- ggplot(tempsL, aes(x=year, y=value, fill=variable)) + 
