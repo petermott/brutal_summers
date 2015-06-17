@@ -2,12 +2,13 @@
 title: "Brutal Oz Summers in Rural Victoria"
 author: "Peter Mott"
 date: "Tuesday, August 05, 2014"
-output: 
-    html_document:
-        theme: "flatly"
-        css: "styles.css"
-  
-
+output:
+  pdf_document: default
+  geometry: margin=1in
+  html_document:
+    css: styles.css
+    theme: flatly
+  fontsize: 11pt
 ---
 
 ```{r echo=FALSE}
@@ -63,7 +64,7 @@ Louise's cafe was in Ouyen (35.1&deg;S, 142.3&deg;E). There is a weather station
 [All data from Australian weather stations is via the KMNI climate site http://climexp.knmi.nl/start.cgi?someone@somewhere]. 
 
 
-```{r, echo=FALSE, fig.align='center'}
+```{r, echo=FALSE}
 d <- read.table("data/MILDURA_AIRPORT_MONTHLY.dat", skip=5, header=FALSE,na.strings="-999.9")
 # library(ggplot2)
 # library(plyr)      # summarise
@@ -94,7 +95,7 @@ What is a brutal temperature?  Well start with 35&deg;C (95&deg;F) which is hot,
 
 [Stations in the region 33-36S and 140-144E which is region. A degree of longitude there is about 58 miles, and of latitude 69 miles] 
 
-```{r echo=FALSE, fig.align='center', fig.width=8, fig.height=4}
+```{r echo=FALSE, fig.width=8, fig.height=4}
 for (file in files) {
 f <- paste("data", file, sep="/")
 d <- read.table(f,header=FALSE,skip=5, col.names=c("year","month", "day", "tmax"))
@@ -109,7 +110,7 @@ Has Extreme heat increased in rural Victoria? Well you can read the charts as we
 
 Mildura Airport which we started with looks to have been more extreme in the 1980's than the (so-called) noughties. I picked on Mildura first quite by chance but there is actually something rather special about it. The nearby, now deceased, station at Mildura Post Office has records back to 1889 which is positively ancient. Here is the chart:
 
-```{r echo=FALSE, fig.align='center', fig.width=8, fig.height=4}
+```{r echo=FALSE, fig.width=8, fig.height=4}
 f <- "data/MILDURA_POST_OFFICE_OLD.dat"
 d <- read.table(f,header=FALSE,skip=4, col.names=c("year","month", "day", "tmax"))
 title <- "MILDURA POST OFFICE"

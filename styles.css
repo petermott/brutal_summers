@@ -2,4 +2,5 @@ blockquote p {font-size:12px !important}
 h1 {font-size: 24px}
 h2 {font-size: 20px}
 h4 {font-size: 15px}
+img {display:block;margin:auto}
 .poem {margin-left:3em; font-size:80%;}
