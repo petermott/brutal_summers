@@ -1,12 +1,18 @@
 ## INSTRUCTIONS
- 
+   These are the source files for my piece Brutal Summers about
+   recent hot summers in Australia.
+   
+   The piece is available at http://monicol.co.uk/brutal_summers.html
+   
+   You can view the pdf version on github
+    
    You should be able to obtain the files and data below.
    Start R_Studio. Change to the folder containing brutal_summers.Rmd
    and load the script. Knitr should compile the HTML file.
    
 ## FILES
-   
-   brutal_summers.html  
+   brutal_summers.pdf - PDF version of final dfocument
+   brutal_summers.html - html final document
    brutal_summers.Rmd  - R markdown document to compile HTML  
    styles.css - stylesheet used for HTML  
    /data   - temperature data files  
